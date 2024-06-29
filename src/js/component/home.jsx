@@ -19,8 +19,8 @@ const Home = () => {
 					></input>
 				</li>
 				{todos.map((todo, index) => (
-					<li key={index}>{todo} 
-					<button>HOLLAAAAAA</button>
+					<li key={index}>{todo}
+					<button onClick={() => setTodos(todos.filter((t, currentIndex) => index != currentIndex))}>✖️</button>
 					</li>
 				))}
 			</ul>
